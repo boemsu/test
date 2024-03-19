@@ -31,8 +31,9 @@
 #<Q4>
 import numpy as np
 manu = {'딸기 탕후루': 3000, '샤인머스켓 탕후루': 3500, '레몬 탕후루': 3500 , '자몽 탕후루': 3500}
+price = []
 for i in manu.keys():
-    price = manu[i]
+    price.append(manu[i])
 prices = np.array(price)
 
 def manu_print():
@@ -45,7 +46,7 @@ def culculate():
     use_money = prices * uses
     use_moneys = np.sum(use_money)
     charge = input_money - use_moneys
-    print("총금액: ",use_moneys, "잔돈: ",charge)
+    print("총금액:",use_moneys, "잔돈:",charge)
 
 manu_print()
 culculate()
